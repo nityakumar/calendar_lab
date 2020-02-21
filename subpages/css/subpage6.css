@@ -1,0 +1,64 @@
+#box {
+    background: pink;
+    border:white 2vw solid;
+  /*   display: block; */
+  }
+  .pic1 img {
+    width: 200px;
+    flex: 0 1 auto;
+  }
+  
+  /* Flexbox Multiple */
+  .journal {
+    display: flex;
+    flex-flow: row no-wrap
+      ;
+    align-items: center;
+    background: black;
+    /* background-image: url("img/back.png"}; */
+    height: 100vh;
+    gap: 3vw;
+  }
+  .journal > * {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+    /* background: pink; */
+    padding: 10px;
+    height: 100px;
+  }
+  #pic2 {
+    align-self: flex-end;
+    order: 2;
+    background: pink;
+  }
+  #pic3 {
+    order: 1;
+    border:0.5vw solid pink;
+  }
+  #pic1{
+    align-self: flex-start;
+    border:0.5vw solid pink;
+  }
+  #pic4{
+    border:0.5vw solid pink;
+  }
+  .journal > * img {
+    width: 30%;
+  }
+ 
+  
+  .journal > * span {
+    display: flex;
+    align-self: center;
+  }
+  
+  @media (max-width: 640px) {
+    .journal {
+        flex-flow: column wrap;
+        justify-content: center;
+    }
+  }
